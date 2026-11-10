@@ -6,11 +6,11 @@ on:
       build_source_melt:
         description: "Source: Melt (Stock HyperOS)"
         type: boolean
-        default: true
+        default: false
       build_source_lineageos:
         description: "Source: LineageOS (LOS ROMs)"
         type: boolean
-        default: false
+        default: true
       build_source_evolution_x:
         description: "Source: Evolution-X (LOS ROMs)"
         type: boolean
@@ -30,7 +30,7 @@ on:
       kernel_source:
         description: "Preset shortcut (auto = use source checkboxes above)"
         type: choice
-        default: auto
+        default: lineageos
         options:
           - auto
           - melt
@@ -50,7 +50,7 @@ on:
       build_kernelsu_next:
         description: "Manager: KernelSU-Next"
         type: boolean
-        default: false
+        default: true
       build_sukisu_ultra:
         description: "Manager: SukiSU Ultra"
         type: boolean
@@ -64,7 +64,7 @@ on:
       enable_susfs:
         description: "Enable SUSFS (applies to KSUNext, SukiSU Ultra, ReSukiSU)"
         type: boolean
-        default: false
+        default: true
       susfs_version:
         description: SUSFS version (latest branch commit, pinned preset, or custom)
         type: choice
